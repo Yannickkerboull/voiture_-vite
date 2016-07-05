@@ -24,45 +24,59 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-    <header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
-                    <div class="intro-text">
-                        <span class="name">Start Bootstrap</span>
-                        <hr class="star-light">
-                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
-                    </div>
-                </div>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Start Jquery Game's</a>
             </div>
-        </div>
-    </header>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div id="jeu" class=".col-sx-9 .col-sm-9 .col-md-12 .col-lg-12" >
-                    <img id="fond1" class="fond" src="./imgs/route.png">
-                    <img id="fond2" class="fond" src="./imgs/route.png">
-                    <img id="vj" src="./imgs/vj.png"> <!-- La voiture jaune -->
-                    <img id="vr" src="./imgs/vr.png"> <!-- La voiture rouge -->
-                </div>
-                <div id="affichage" class=".col-sx-3 .col-sm-3 .col-md-12 .col-lg-12 text-center">
-                    <table id="panel">
-                        <tr>
-                            <td></td>
-                            <td>Collisions : <span id="info">0</span></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Temps de jeu: <span id="temps">0</span> s</td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#master">master</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#voiture_simple">voiture_simple</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                </ul>
             </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <section id ="voiture_simple">
+        <div  id="jeu" class="text-center">
+            <img id="fond1" class="fond" src="./imgs/route.png">
+            <img id="fond2" class="fond" src="./imgs/route.png">
+            <img id="vj" src="./imgs/vj.png"> <!-- La voiture jaune -->
+            <img id="vr" src="./imgs/vr.png"> <!-- La voiture rouge -->
+            <img id="bl" src="./imgs/bl.png">
+            <img id="ok" src="./imgs/ok.png">
+        </div>
+        <div id="affichage" class="text-center">
+            <p>
+                Collisions : <span id="info">0</span><br>
+                Score: <span id="result"> 0 </span>pts<br>
+                Temps de jeu: <span id="temps">0</span> s<br>
+                Vie de la voiture :
+            </p>
+        </div>
+        <div>
+            <button class="" id="gauche"></button>
+            <button class="" id="droite"></button>
+        </div>
+    </section>
+    <section id="master">
+        test !
     </section>
 
 </body>

@@ -5,6 +5,8 @@ $(document).ready(function() {
     var ok = 1;
     var savDebTime = $.now();
     var temps = 0;
+    var result = -20;
+    var pertePoints = 0;
 
     function deplace()
     {
@@ -19,6 +21,13 @@ $(document).ready(function() {
             $('#vr').css('top',vrY);
             $('#vr').css('left',vrX);
             ok = 1;
+            if (pertePoints == 0)
+            {
+                result = result + 20;
+            }else{
+                pertePoints = 0;
+            }
+            $('#result').text(result);
             /*
             if (savDebTime == 0){
                 savDebTime = e.timeStamp;
@@ -59,6 +68,9 @@ $(document).ready(function() {
             collision = parseInt($('#info').text()) + 1;
             $('#info').text(collision);
             ok = 0;
+            result = result - 10;
+            pertePoints = 10;
+            $('#result').text(result);
         }
     }
     
