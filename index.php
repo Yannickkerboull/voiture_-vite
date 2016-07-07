@@ -18,6 +18,7 @@
     <title>Voiture</title>
     <link rel="stylesheet" href="styles/style1.css" type="text/css" />
     <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/script_menu.js"></script>
     <script src="js/script.js"></script>
 
     <link rel="stylesheet" href="styles/bootstrap.min.css">
@@ -38,13 +39,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#master">master</a>
+                    <li class="page-scroll" id="master">
+                        <a href="#master" id="master">master</a>
                     </li>
-                    <li class="page-scroll">
+                    <li class="page-scroll" id="voiture_simple">
                         <a href="#voiture_simple">voiture_simple</a>
                     </li>
-                    <li class="page-scroll">
+                    <li class="page-scroll" id="about">
                         <a href="#about">About</a>
                     </li>
                 </ul>
@@ -53,7 +54,7 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <section id ="voiture_simple">
+    <section id ="voiture_simple_">
         <div  id="jeu" class="text-center">
             <img id="fond1" class="fond" src="./imgs/route.png">
             <img id="fond2" class="fond" src="./imgs/route.png">
@@ -62,21 +63,24 @@
             <img id="bl" src="./imgs/bl.png">
             <img id="ok" src="./imgs/ok.png">
         </div>
-        <div id="affichage" class="text-center">
+        <div class="col-xs-1 text-center">
+            <a id="gauche"><button class="btn btn-success btn-lg" >g</button></a>
+        </div>
+        <div id="affichage" class="col-xs-10 text-center">
             <p>
                 Collisions : <span id="info">0</span><br>
                 Score: <span id="result"> 0 </span>pts<br>
                 Temps de jeu: <span id="temps">0</span> s<br>
-                Vie de la voiture :
+                Vie de la voiture : <span id="life"> 10 </span>
             </p>
         </div>
-        <div>
-            <button class="" id="gauche"></button>
-            <button class="" id="droite"></button>
+        <div class="col-xs-1 text-center">
+            <a id="droite"><button class="btn btn-warning btn-lg" >d</button></a>
         </div>
     </section>
-    <section id="master">
-        test !
+    <br>
+    <section id="master_">
+        Affichage de base
     </section>
 
 </body>
