@@ -12,8 +12,7 @@ function voiture(){
     var temps = 0;
     var result = -20;
     var pertePoints = 0;
-    //var nbLife = 10;
-    var nbLife = 1;
+    var nbLife = 10;
 
     function deplace()
     {
@@ -29,6 +28,15 @@ function voiture(){
                 }else{
                     pertePoints = 0;
                 }
+                $('#result').text(result + " ");
+
+            });
+            $('#vr').animate({top: '-=600'}, 2500, 'linear', function(){
+                var vrX = Math.floor(Math.random()*194)+70;
+                var vrY = 400;
+                $('#vr').css('top',vrY);
+                $('#vr').css('left',vrX);
+
                 $('#result').text(result + " ");
 
             });
@@ -120,6 +128,6 @@ function voiture(){
         }
     }
     deplace();
-    setInterval(collision, 20);//Temps d'attente avant de revérifier la collision
+    setInterval(collision, 10);//Temps d'attente avant de revérifier la collision
     setInterval(timer, 1000);
 }
