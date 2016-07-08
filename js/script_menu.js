@@ -3,18 +3,7 @@
  */
 
 $(document).ready(function() {
-    var continued = true;
-    $("#voiture_simple_").hide();
-    $("#master_").show();
-
-    $('#master').click(function(e){
-        $("#voiture_simple_").hide();
-        $("#master_").show();
-    });
-
-    $('#voiture_simple').click(function(e){
-        $("#master_").hide();
-        $("#voiture_simple_").show();
-        voiture();
-    });
+    $("#voiture_simple_").show();
+    $("#voiture_results_").hide();
+    voiture();
 });
